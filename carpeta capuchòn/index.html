@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marquesina en la parte superior</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .marquesina {
+      position: fixed;
+      font-family: 'Times New Roman', sans-serif;
+      top: 0;
+      width: 100%;
+      background-color: #deb480;
+      color: rgb(245, 239, 239);
+      font-size: 50px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      z-index: 1000;
+    }
+
+    .marquesina span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 8s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Para que el contenido no quede tapado */
+    .contenido {
+      margin-top: 50px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquesina"><span> Aquí encontrarás todo para tener una vida sexual saludable.   </span></div>
+</body>
+</html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Capuchón. Información, recursos y consejos para una vida sexual saludable." />
+  <title>Capuchón - Salud sexual</title>
+  <link rel="stylesheet" href="Formato.css" />
+</head>
+<body>
+  <header>
+    <h1>Capuchón</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('bienvenida')">Bienvenida</a></li>
+        <li><a href="#" onclick="showSection('sobre-nosotros')">Sobre nosotros</a></li>
+        <li><a href="#" onclick="showSection('info')">Información</a></li>
+        <li><a href="#" onclick="showSection('recursos')">Recursos</a></li>
+        <li><a href="#" onclick="showSection('contacto')">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="bienvenida" class="seccion activa">
+      <h1 style="font-size: 3rem;">Bienvenidos a Capuchón</h1>
+      <p style="font-size: 2rem;">Explora nuestras opciones sobre salud sexual.</p>
+      <div class="contenedor-galeria" style="margin-top: 70px;">
+        <div class="imagen-galeria"><img src="img/LogoSS.png" alt="Imagen 1"></div>
+        <div class="imagen-galeria"><img src="img/LogoCS.png" alt="Imagen 2"></div>
+        <div class="imagen-galeria"><img src="img/LogoETS.png" alt="Imagen 3"></div>
+        <div class="imagen-galeria"><img src="img/LogoMAC.png" alt="Imagen 4"></div>
+        <div class="imagen-galeria"><img src="img/LogoDOC.png" alt="Imagen 5"></div>
+      </div>
+    </section>
+    <section id="sobre-nosotros" class="seccion">
+      <div class="contenedor-sobre-nosotros">
+        <div class="texto">
+          <h2>Sobre nosotros</h2>
+          <p class="destacado">Somos un espacio seguro y abierto a solucionar preguntas relacionadas con la sexualidad.</p>
+          <p>Creemos que una vida sexual informada y responsable es parte esencial del bienestar integral.</p>
+        </div>
+        <div class="imagen">
+          <img src="img/doct-1.png" alt="Logo minimalista" />
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="seccion">
+      <h2>Información importante</h2>
+      <div class="contenedor-apartados">
+        <div class="apartado" onclick="showSubsection('salud-sexual')">
+          <img src="img/cora.png" alt="Salud Sexual" />
+          <h3>Salud Sexual</h3>
+          <p>Conceptos clave para una vida sexual saludable.</p>
+        </div>
+
+        <div class="apartado" onclick="showSubsection('ets')">
+          <img src="img/vacuna.png" alt="ETS" />
+          <h3>Enfermedades de Transmisión Sexual (ETS)</h3>
+          <p>Tipos, síntomas, prevención y tratamiento.</p>
+        </div>
+
+        <div class="apartado" onclick="showSubsection('metodos-anticonceptivos')">
+          <img src="img/boto.png" alt="Métodos Anticonceptivos" />
+          <h3>Métodos Anticonceptivos</h3>
+          <p>Opciones seguras y efectivas para la planificación.</p>
+        </div>
+
+        <div class="apartado" onclick="showSubsection('mediana-edad')">
+          <img src="img/abuelitosalv.png" alt="Mediana Edad" />
+          <h3>Mediana Edad</h3>
+          <p>Cambios emocionales y físicos en esta etapa.</p>
+        </div>
+      </div>
+      <div id="contenido-info"></div>
+    </section>
+
+    <section id="recursos" class="seccion">
+      <h2>Recursos</h2>
+      <p>Fuentes confiables de información médica.</p>
+    </section>
+
+    <section id="contacto" class="seccion">
+      <h2>Contacto</h2>
+      <p>Envíanos un mensaje a <a href="mailto:info@saludsexual.org">info@saludsexual.org</a>.</p>
+    </section>
+
+    <section id="salud-sexual" class="seccion">
+      <h2>Salud Sexual</h2>
+      <p>La salud sexual es un componente integral del bienestar físico, emocional, mental y social, relacionado con la sexualidad. Es mucho más que la ausencia de enfermedades; incluye una experiencia positiva de la sexualidad, el acceso a la educación sexual, la toma de decisiones informadas, la prevención de riesgos, y la convivencia saludable con la sexualidad propia y ajena.</p>
+
+      <h3>Aspectos clave de la salud sexual</h3>
+      <ul class="lista-clave">
+        <li><strong>Derechos sexuales:</strong> Toda persona tiene derecho a disfrutar de una sexualidad libre, consentida y respetuosa.</li>
+        <li><strong>Prevención de enfermedades:</strong> El uso de métodos anticonceptivos y barreras (como los preservativos) es clave para evitar infecciones de transmisión sexual (ITS).</li>
+        <li><strong>Consentimiento:</strong> El consentimiento mutuo es la base de cualquier actividad sexual, siempre debe ser libre, informado y reversible.</li>
+        <li><strong>Educación sexual:</strong> La educación sexual integral proporciona información objetiva y científica sobre los aspectos biológicos, emocionales y sociales de la sexualidad.</li>
+        <li><strong>Relaciones saludables:</strong> Las relaciones sexuales deben basarse en la igualdad, el respeto y el bienestar de ambas partes, sin presiones ni abusos.</li>
+        <li><strong>Bienestar emocional:</strong> La salud sexual también está conectada con el bienestar emocional, por lo que es importante sentirte cómodo con tu cuerpo y con tus decisiones sexuales.</li>
+      </ul>
+
+      <h3>Importancia de las consultas regulares</h3>
+      <p>Visitar al ginecólogo, urólogo o médico de confianza regularmente es fundamental para la prevención de enfermedades y para mantener un control adecuado sobre nuestra salud sexual. Las pruebas de ITS, el control de métodos anticonceptivos, y el chequeo de la salud reproductiva son esenciales.</p>
+
+      <h3>Consejos para una vida sexual saludable</h3>
+      <ul class="lista-clave">
+        <li>Usar preservativos de forma adecuada en cada encuentro sexual.</li>
+        <li>Conocer y respetar tus propios deseos, límites y los de tu pareja.</li>
+        <li>Fomentar una comunicación abierta y sincera con tu pareja sobre expectativas, deseos y preocupaciones.</li>
+        <li>Realizar chequeos médicos periódicos, incluyendo pruebas de ITS.</li>
+        <li>Mantener un equilibrio emocional, buscando ayuda profesional si es necesario.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Campaña de Salud Sexual. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      showSection('bienvenida');
+    });
+
+    function showSection(id) {
+      document.querySelectorAll('.seccion').forEach(section => {
+        section.classList.remove('activa');
+      });
+      document.getElementById(id).classList.add('activa');
+    }
+
+    function showSubsection(id) {
+      const contenido = {
+        "salud-sexual": "<h3>Salud Sexual</h3><p>Una vida sexual saludable implica bienestar físico, emocional y social...</p>",
+        "ets": `
+          <h3>Enfermedades de Transmisión Sexual (ETS)</h3>
+          <p>Las ETS pueden afectar la salud si no se previenen adecuadamente. Aquí te dejamos información clave.</p>
+          <div class="contenedor-ets">
+            <div class="tarjeta"><h3>Virus del Papiloma Humano (VPH)</h3><p><strong>Síntomas:</strong> Verrugas genitales, algunos tipos pueden causar cáncer.</p><p><strong>Prevención:</strong> Vacunación, uso de preservativo, chequeos médicos.</p><p><strong>Tratamiento:</strong> Procedimientos médicos (no tiene cura).</p></div>
+            <div class="tarjeta"><h3>Clamidia</h3><p><strong>Síntomas:</strong> Dolor al orinar, flujo anormal.</p><p><strong>Prevención:</strong> Preservativo, pruebas regulares.</p><p><strong>Tratamiento:</strong> Antibióticos (azitromicina, doxiciclina).</p></div>
+            <div class="tarjeta"><h3>Gonorrea</h3><p><strong>Síntomas:</strong> Secreción purulenta, dolor al orinar.</p><p><strong>Prevención:</strong> Preservativo.</p><p><strong>Tratamiento:</strong> Antibióticos (ceftriaxona).</p></div>
+            <div class="tarjeta"><h3>Sífilis</h3><p><strong>Síntomas:</strong> Llagas, erupciones, daño a órganos.</p><p><strong>Prevención:</strong> Sexo seguro, pruebas.</p><p><strong>Tratamiento:</strong> Penicilina.</p></div>
+            <div class="tarjeta"><h3>Herpes Genital</h3><p><strong>Síntomas:</strong> Ampollas o úlceras en genitales.</p><p><strong>Prevención:</strong> Preservativo, evitar contacto en brote.</p><p><strong>Tratamiento:</strong> Antivirales (aciclovir).</p></div>
+            <div class="tarjeta"><h3>VIH/SIDA</h3><p><strong>Síntomas:</strong> Gripe inicial, inmunodeficiencia progresiva.</p><p><strong>Prevención:</strong> Preservativo, PrEP.</p><p><strong>Tratamiento:</strong> Antirretrovirales (controlan, no curan).</p></div>
+            <div class="tarjeta"><h3>Tricomoniasis</h3><p><strong>Síntomas:</strong> Flujo maloliente, picazón genital.</p><p><strong>Prevención:</strong> Preservativo.</p><p><strong>Tratamiento:</strong> Metronidazol.</p></div>
+            <div class="tarjeta"><h3>Hepatitis B</h3><p><strong>Síntomas:</strong> Ictericia, fatiga, dolor abdominal.</p><p><strong>Prevención:</strong> Vacunación, preservativo.</p><p><strong>Tratamiento:</strong> Antivirales (crónica).</p></div>
+            <div class="tarjeta"><h3>Molusco Contagioso</h3><p><strong>Síntomas:</strong> Bultos brillantes en piel.</p><p><strong>Prevención:</strong> Higiene, evitar contacto.</p><p><strong>Tratamiento:</strong> Eliminación médica (láser, crioterapia).</p></div>
+            <div class="tarjeta"><h3>Ladillas (Piojos púbicos)</h3><p><strong>Síntomas:</strong> Picazón intensa en área púbica.</p><p><strong>Prevención:</strong> Evitar compartir ropa íntima.</p><p><strong>Tratamiento:</strong> Lociones o champús especiales.</p></div>
+          </div>
+          <h3>Enfermedades de Transmisión Sexual (ETS)</h3>
+<p>Las ETS pueden afectar la salud si no se previenen adecuadamente. Aquí te dejamos información clave.</p>
+<div class="contenedor-ets">
+  <div class="tarjeta">
+    <h3>Virus del Papiloma Humano (VPH)</h3>
+    <p><strong>Síntomas:</strong> Verrugas genitales, algunos tipos pueden causar cáncer.</p>
+    <p><strong>Prevención:</strong> Vacunación, uso de preservativo, chequeos médicos.</p>
+    <p><strong>Tratamiento:</strong> Procedimientos médicos (no tiene cura).</p>
+  </div>
+  <div class="tarjeta">
+    <h3>Clamidia</h3>
+    <p><strong>Síntomas:</strong> Dolor al orinar, flujo anormal.</p>
+    <p><strong>Prevención:</strong> Preservativo, pruebas regulares.</p>
+    <p><strong>Tratamiento:</strong> Antibióticos (azitromicina, doxiciclina).</p>
+  </div>
+  <div class="tarjeta">
+    <h3>Gonorrea</h3>
+    <p><strong>Síntomas:</strong> Secreción purulenta, dolor al orinar.</p>
+    <p><strong>Prevención:</strong> Preservativo.</p>
+    <p><strong>Tratamiento:</strong> Antibióticos (ceftriaxona).</p>
+  </div>
+  <div class="tarjeta">
+    <h3>Sífilis</h3>
+    <p><strong>Síntomas:</strong> Llagas, erupciones, daño a órganos.</p>
+    <p><strong>Prevención:</strong> Sexo seguro, pruebas.</p>
+    <p><strong>Tratamiento:</strong> Penicilina.</p>
+  </div>
+  <div class="tarjeta">
+    <h3>Herpes</h3>
+    <p><strong>Síntomas:</strong> Llagas dolorosas, ardor al orinar.</p>
+    <p><strong>Prevención:</strong> Uso de preservativo, evitar contacto durante brotes.</p>
+    <p><strong>Tratamiento:</strong> Antivirales (aciclovir, valaciclovir).</p>
+  </div>
+  <div class="tarjeta">
+    <h3>VIH/SIDA</h3>
+    <p><strong>Síntomas:</strong> Fiebre, pérdida de peso, fatiga, infecciones recurrentes.</p>
+    <p><strong>Prevención:</strong> Uso de preservativos, pruebas regulares, tratamiento profiláctico (PrEP).</p>
+    <p><strong>Tratamiento:</strong> Antirretrovirales (para controlar la carga viral).</p>
+  </div>
+  <div class="tarjeta">
+    <h3>Hepatitis B</h3>
+    <p><strong>Síntomas:</strong> Ictericia, dolor abdominal, náuseas.</p>
+    <p><strong>Prevención:</strong> Vacuna, uso de preservativo.</p>
+    <p><strong>Tratamiento:</strong> Antivirales.</p>
+  </div>
+  <div class="tarjeta">
+    <h3>Hepatitis C</h3>
+    <p><strong>Síntomas:</strong> Fatiga, dolor abdominal, ictericia.</p>
+    <p><strong>Prevención:</strong> Uso de preservativo, evitar contacto con sangre infectada.</p>
+    <p><strong>Tratamiento:</strong> Antivirales.</p>
+  </div>
+  <div class="tarjeta">
+    <h3>Tricomoniasis</h3>
+    <p><strong>Síntomas:</strong> Flujo vaginal con mal olor, picazón.</p>
+    <p><strong>Prevención:</strong> Uso de preservativo, pruebas regulares.</p>
+    <p><strong>Tratamiento:</strong> Medicamentos antiparasitarios.</p>
+  </div>
+</div>
+
+        `,
+        "metodos-anticonceptivos": `
+          <h3>Métodos Anticonceptivos</h3>
+          <p>Los métodos anticonceptivos ayudan a prevenir embarazos y, algunos, también protegen contra enfermedades de transmisión sexual.</p>
+          <div class="contenedor-metodos">
+            <div class="tarjeta">
+              <h3>Preservativo (Condón)</h3>
+              <p><strong>Tipo:</strong> Barrera</p>
+              <p><strong>Uso:</strong> Hombre y mujer</p>
+            </div>
+            <div class="tarjeta">
+              <h3>Píldoras Anticonceptivas</h3>
+              <p><strong>Tipo:</strong> Hormonal</p>
+              <p><strong>Uso:</strong> Mujer</p>
+            </div>
+          </div>
+        `
+      };
+
+      document.getElementById("contenido-info").innerHTML = contenido[id];
+    }
+  </script>
+</body>
+git remote add origin https://github.com/soloquierohacermiproyecto/capuchon.git
+git branch -M main
+git push -u origin main
+</html>
